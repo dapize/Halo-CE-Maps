@@ -7,7 +7,7 @@ export default function ( request: Request, res: Response ) {
   const filePath = resolve(__basedir, './public/maps/' + mapName);
   res.download(filePath, mapName, async (err) => {
     if ( err ) {
-      console.log( err );
+      res.status(404);
       return;
     }
     try {
