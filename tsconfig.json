@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["esnext"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "preserveConstEnums": true,
+    "allowJs": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "downlevelIteration": true,
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "@helpers": ["helpers"],
+      "@helpers/*": ["helpers/*"],
+      "@controllers": ["controllers"],
+      "@controllers/*": ["controllers/*"],
+      "@models": ["models"],
+      "@models/*": ["models/*"],
+      "@config": ["config"],
+      "@config/*": ["config/*"]
+    }
+  },
+  "exclude": [ "node_modules", "public", "tsconfig.json", "jest.config.js", "dist" ],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+}
